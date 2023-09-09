@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}IT Careers Co.{% endblock title %}
-{% block header %} {{ super() }} {% endblock header %} {{ super() }} 
 {% block content %}
-    <h1>IT Careers</h1>
-    <img id="banner" src="{{ url_for('static', filename="assets/img/career-banner.jpg") }}"
+    <h1 class="text-center">IT Careers</h1>
+    <img class="img-fluid" id="banner" src="{{ url_for('static', filename="assets/img/career-banner.jpg") }}"
     alt="career-banner" width="100%" />
-    <h2>About IT Careers Co.</h2>
-    <p>
+    <h2 class="text-center mt-2 mb-4">About IT Careers Co.</h2>
+    <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Elit at imperdiet dui accumsan
         sit amet nulla. Nunc sed augue lacus viverra vitae congue eu. Volutpat
@@ -24,7 +23,7 @@
         rhoncus dolor purus non enim praesent. Hendrerit gravida rutrum quisque non
         tellus orci ac auctor augue.
     </p>
-    <p>
+    <p class="lead">
         Sed vulputate mi sit amet mauris. Tincidunt
         praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Vitae
         aliquet nec ullamcorper sit. Orci ac auctor augue mauris augue neque.
@@ -41,9 +40,13 @@
         auctor augue mauris. Morbi enim nunc faucibus a pellentesque sit. At erat
         pellentesque adipiscing commodo elit at.
     </p>
-    <h2>Open Positions</h2>
-    <p>TODO - Jobs list</p>
-    <div style="text-align:center">
-        <button>Contact Us</button>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <p class="lead">
+        {% for job in jobs %}
+            {% include 'jobitem.html' %}
+        {% endfor %}
+    </p>
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
     </div>
 {% endblock content %}
