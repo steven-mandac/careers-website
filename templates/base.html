@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- css -->
+    {% block styles %}
+        <link rel="stylesheet" href="{{ url_for('static', filename="css/styles.css") }}" />
+    {% endblock styles %}
+</head>
+<body>
+
+    <!-- nav -->
+    {% block header %}
+    
+    {% endblock header %}
+
+    <div class="container">
+    <!-- main content -->
+    {% block content %}
+    
+    {% endblock content %}
+    </div>
+
+    <!-- footer -->
+    {% block footer %}
+    <div class="container">
+        <p class="footer-text">
+            <span>Copyright &copy; 2023</span>
+        </p>
+    </div>
+    {% endblock footer %}
+    
+    <!-- scripts -->
+    {% block scripts %}
+    
+    {% endblock scripts %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    background-color: #002011;
+    color: antiquewhite
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#banner {
+    height: 620px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 60vw;
+    margin: auto;
+}
+
+.footer-text {
+    text-align: center;
+}
